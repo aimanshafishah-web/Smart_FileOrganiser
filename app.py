@@ -14,7 +14,13 @@ st.set_page_config(
 # Application heading
 st.title("📁 Welcome to SORTIFY")
 st.write("Your smart assistant for organising digital files.")
+st.sidebar.image("logo.png", width=120)
+st.sidebar.title("SORTIFY")
 
+menu = st.sidebar.radio(
+    "Navigation",
+    ["Home", "Organise Files", "About", "Help"]
+)
 st.divider()
 
 # File categories

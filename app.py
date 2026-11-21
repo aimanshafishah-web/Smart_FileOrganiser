@@ -3,6 +3,9 @@ import streamlit as st
 import os
 import io
 import zipfile
+st.title("📁 Welcome to SORTIFY")
+
+st.write("Your smart assistant for organising digital files.")
 
 # Page settings
 st.set_page_config(
@@ -23,12 +26,12 @@ st.divider()
 
 # File categories
 file_types = {
-    "Documents": [".pdf", ".docx", ".txt"],
-    "Images": [".jpg", ".jpeg", ".png"],
+    "📄Documents": [".pdf", ".docx", ".txt"],
+    "🖼️ Images": [".jpg", ".jpeg", ".png"],
     "Spreadsheets": [".xlsx", ".csv"],
-    "Videos": [".mp4", ".mkv"],
-    "Audio": [".mp3", ".wav"],
-    "Archives": [".zip", ".rar"]
+    " 🎬Videos": [".mp4", ".mkv"],
+    " 🎵 Audio": [".mp3", ".wav"],
+    "📦Archives": [".zip", ".rar"]
 }
 
 # Function to identify category

@@ -27,9 +27,6 @@ for index, (category, files) in enumerate(
             value=len(files)
         )
 
-# Calculate total uploaded files
-total_files = len(uploaded_files)
-
 # Calculate category-wise file counts
 documents = len(organised_files.get("Documents", []))
 images = len(organised_files.get("Images", []))

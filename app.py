@@ -7,20 +7,6 @@ st.title("📁 Welcome to SORTIFY")
 
 st.write("Your smart assistant for organising digital files.")
 
-# Page settings
-st.set_page_config(
-    page_title="Smart File Organiser",
-    page_icon="📁",
-    layout="wide"
-)
-
-# Title
-st.title("📁 Smart File Organiser")
-
-st.write(
-    "Organise your files automatically into categories "
-    "and download them in one ZIP folder."
-)
 
 st.divider()
 

@@ -16,8 +16,6 @@ menu = st.sidebar.radio(
 
 cols = st.columns(3)
 
-total_files = len(uploaded_files)
-
 for index, (category, files) in enumerate(
     organised_files.items()
 ):

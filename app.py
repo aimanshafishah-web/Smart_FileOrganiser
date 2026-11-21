@@ -13,11 +13,49 @@ menu = st.sidebar.radio(
     "Navigation",
     ["Home", "Organise Files", "About", "Help"]
 )
-col1, col2, col3 = st.columns(3)
 
-col1.metric("Total Files", 20)
-col2.metric("Documents", 8)
-col3.metric("Images", 5)
+cols = st.columns(3)
+
+total_files = len(uploaded_files)
+
+for index, (category, files) in enumerate(
+    organised_files.items()
+):
+
+    with cols[index % 3]:
+
+        st.metric(
+            label=f"📂 {category}",
+            value=len(files)
+        )
+
+# Calculate total uploaded files
+total_files = len(uploaded_files)
+
+# Calculate category-wise file counts
+documents = len(organised_files.get("Documents", []))
+images = len(organised_files.get("Images", []))
+videos = len(organised_files.get("Videos", []))
+audio = len(organised_files.get("Audio", []))
+spreadsheets = len(organised_files.get("Spreadsheets", []))
+archives = len(organised_files.get("Archives", []))
+others = len(organised_files.get("Others", []))
+
+# Display dashboard cards
+st.subheader("📊 Your File Dashboard")
+
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("📁 Total Files", total_files)
+col2.metric("📄 Documents", documents)
+col3.metric("🖼️ Images", images)
+col4.metric("📂 Others", others)
+
+col5, col6, col7 = st.columns(3)
+
+col5.metric("🎬 Videos", videos)
+col6.metric("🎵 Audio", audio)
+col7.metric("📦 Archives", archives)
 
 st.divider()
 

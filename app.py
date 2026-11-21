@@ -6,7 +6,18 @@ import zipfile
 st.title("📁 Welcome to SORTIFY")
 
 st.write("Your smart assistant for organising digital files.")
+st.sidebar.image("logo.png", width=120)
+st.sidebar.title("SORTIFY")
 
+menu = st.sidebar.radio(
+    "Navigation",
+    ["Home", "Organise Files", "About", "Help"]
+)
+col1, col2, col3 = st.columns(3)
+
+col1.metric("Total Files", 20)
+col2.metric("Documents", 8)
+col3.metric("Images", 5)
 
 st.divider()
 

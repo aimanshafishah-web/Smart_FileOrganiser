@@ -35,7 +35,11 @@ menu = st.sidebar.radio(
     ["Home", "Organise Files", "About", "Help"]
 )
 st.divider()
-
+if menu == "Organise Files":
+    st.info("📂 Upload your files below, then download them sorted into folders as a ZIP.")
+if menu in ["About", "Help"]:
+    st.success({"About": "ℹ️ SORTIFY is your smart assistant for organising digital files.", "Help": "❓ Open Home or Organise Files, upload your files, then click Download Organised Files."}[menu])
+    st.stop()
 # File categories
 file_types = {
     "Documents": [".pdf", ".docx", ".txt"],

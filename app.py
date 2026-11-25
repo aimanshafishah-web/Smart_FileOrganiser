@@ -31,8 +31,8 @@ if "welcomed" not in st.session_state:
     st.session_state.welcomed = True
 
 menu = st.sidebar.radio(
-    "Navigation",
-    ["Home", "Organise Files", "About", "Help"]
+    "Home",
+    ["Organise Files", "About", "Help"]
 )
 st.divider()
 if menu == "Organise Files":

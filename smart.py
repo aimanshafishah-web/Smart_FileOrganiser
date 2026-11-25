@@ -48,7 +48,6 @@ def organise_files(source_folder):
 folder_path = input("Enter folder path: ")
 
 if os.path.isdir(folder_path):
-
     organise_files(folder_path)
 
     print("Files organised successfully!")

@@ -17,6 +17,19 @@ st.write("Your smart assistant for organising digital files.")
 st.sidebar.image("logo.png", width=120)
 st.sidebar.title("SORTIFY")
 
+st.markdown("""<style>
+.stApp {background: linear-gradient(135deg, #f3e8ff, #e0f7fa);}
+[data-testid="stSidebar"] {background: linear-gradient(#ddd6fe, #bae6fd);}
+[data-testid="stMetric"] {background: white; padding: 15px; border-radius: 18px; border-left: 6px solid #8b5cf6; box-shadow: 0 4px 12px #8b5cf633;}
+[data-testid="stExpander"] {background: white; border-radius: 12px;}
+.stDownloadButton button {background: linear-gradient(90deg, #7c3aed, #0369a1); color: white; border-radius: 25px;}
+.banner {background: linear-gradient(90deg, #7c3aed, #0369a1); color: white; padding: 15px; border-radius: 18px; text-align: center; font-size: 28px;}
+</style>
+<div class="banner">📄 🖼️ 🎵 ➜ ✨📁✨ Sort Smart!</div>""", unsafe_allow_html=True)
+if "welcomed" not in st.session_state:
+    st.balloons()
+    st.session_state.welcomed = True
+
 menu = st.sidebar.radio(
     "Navigation",
     ["Home", "Organise Files", "About", "Help"]
